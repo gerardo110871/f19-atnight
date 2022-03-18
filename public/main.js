@@ -9,9 +9,7 @@ function create() {
     // console.log(input.value)
     axios.post("http://localhost:4005/test", thing)
     .then((res) => {
-        nameInput = res.data
-        alert(nameInput)
-        
+        alert(res.data)
         console.log(thing.text)
     })
     .catch((err) => {
