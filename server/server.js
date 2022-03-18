@@ -23,12 +23,17 @@ rollbar.log('Hello world!')
 
 //serving files using endpoints(app.get)
 app.get("/", function(req, res) {
-    rollbar.log('We finally did it')
+    rollbar.info('We finally did it')
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
+app.get('/js', function(req, res) {
+    rollbar.info('Served JS')
+    res.sendFile(path.join(__dirname, '../public/index.js')
+})
+
 app.post("/test", function(req, res) {
-    rollbar.log(`we have received a response ${req.body.text}`)
+    rollbar.info(`we have received a response ${req.body.text}`)
     res.sendStatus(200)
 })
 
