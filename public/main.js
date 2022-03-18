@@ -9,8 +9,6 @@ function create() {
     axios.post("/test", thing)
     .then((res) => {
         alert(res.data)
-        let input = ""
-        // console.log(thing.text)
     })
     .catch((err) => {
         console.error(err)
