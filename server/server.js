@@ -27,7 +27,7 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-app.post("/yo", function(req, res) {
+app.post("/test", function(req, res) {
     rollbar.log(`we have received your ${req.body.text}`)
     res.sendStatus(200)
 })
