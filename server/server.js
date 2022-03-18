@@ -24,7 +24,7 @@ rollbar.log('Hello world!')
 //serving files using endpoints(app.get)
 app.get("/", function(req, res) {
     rollbar.log('We finally did it')
-    res.sendFile(path.join(__dirname, '../public'))
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
 const port = process.env.PORT || 4005
