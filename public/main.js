@@ -6,7 +6,7 @@ function create() {
         text: input.value
     }
     // console.log(input.value)
-    axios.post("http://localhost:4005/test", thing)
+    axios.post("/test", thing)
     .then((res) => {
         alert(res.data)
     })
