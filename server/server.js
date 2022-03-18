@@ -29,7 +29,7 @@ app.get("/", function(req, res) {
 
 app.post("/test", function(req, res) {
     rollbar.log(`we received ${req.data.text}`)
-    res.sendStatus(200)
+    res.sendFile(path.join(__dirname, '../public'))
 })
 
 const port = process.env.PORT || 4005
