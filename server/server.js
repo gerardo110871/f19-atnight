@@ -27,9 +27,9 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-app.post("/test", function(req, res) {
-    rollbar.log(`we received ${req.data.text}`)
-    res.sendFile(path.join(__dirname, '../public'))
+app.post("/yo", function(req, res) {
+    rollbar.log(`we have received a response ${req.body.text}`)
+    res.sendStatus(200)
 })
 
 const port = process.env.PORT || 4005
