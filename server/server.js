@@ -28,7 +28,7 @@ app.get("/", function(req, res) {
 })
 
 app.post("/test", function(req, res) {
-    rollbar.log(`we have received your ${req.body.text}`)
+    rollbar.log(`we received ${req.data.text}`)
     res.sendStatus(200)
 })
 
